@@ -3,7 +3,7 @@
  * Shared project dataset. Replace this stub with Astro content
  * collections or an API fetch when ready.
  */
-import type { Project } from "@components/dom/desktop/desktop-project-grid.astro";
+import type { Project } from "@data/highlight-projects/types";
 
 export const projects: Project[] = [
   {
@@ -13,6 +13,7 @@ export const projects: Project[] = [
     year: 2025,
     cover:
       "https://preview.redd.it/macos-golden-gate-background-for-anyone-that-wants-it-v0-yzfjy05hyi6h1.jpeg?width=640&crop=smart&auto=webp&s=5aa6ff78411dc1fe72381fc78ec7d218c30d434d",
+    tech_stack: [],
   },
   {
     slug: "helix",
@@ -20,6 +21,7 @@ export const projects: Project[] = [
     category: "3D",
     year: 2025,
     cover: "/fallback/helix.jpg",
+    tech_stack: [],
   },
   {
     slug: "tessera",
@@ -27,6 +29,7 @@ export const projects: Project[] = [
     category: "WebGL",
     year: 2024,
     cover: "/fallback/tessera.jpg",
+    tech_stack: [],
   },
   {
     slug: "nimbus",
@@ -34,5 +37,6 @@ export const projects: Project[] = [
     category: "Motion",
     year: 2024,
     cover: "/fallback/nimbus.jpg",
+    tech_stack: [],
   },
 ];

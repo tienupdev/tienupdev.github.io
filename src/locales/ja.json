@@ -48,6 +48,9 @@
     "phone": "電話",
     "email": "メール"
   },
+  "highlight_projects": {
+    "title": "注目プロジェクト"
+  },
   "highlights": {
     "title": "ハイライト",
     "previous": "前の動画",

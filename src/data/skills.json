@@ -36,14 +36,14 @@
         "extra_notes": "High-throughput services, streams, worker threads, and edge runtimes."
       },
       {
-        "name": "Socket.io",
+        "name": "Socket.io/Pusher",
         "efficiency": 0.9,
         "experienced_since": 1483228800000,
         "color": "#83cd29",
         "extra_notes": "High-throughput services, streams, worker threads, and edge runtimes."
       },
       {
-        "name": "Express.js / Elysia",
+        "name": "Express.js/Elysia",
         "efficiency": 0.9,
         "experienced_since": 1483228800000,
         "color": "#83cd29",

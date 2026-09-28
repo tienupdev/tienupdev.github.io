@@ -48,6 +48,9 @@
     "phone": "Điện thoại",
     "email": "Email"
   },
+  "highlight_projects": {
+    "title": "Dự án nổi bật"
+  },
   "highlights": {
     "title": "Tiêu điểm",
     "previous": "Video trước",

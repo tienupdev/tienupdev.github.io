@@ -48,6 +48,9 @@
     "phone": "Phone",
     "email": "Email"
   },
+  "highlight_projects": {
+    "title": "Featured Projects"
+  },
   "highlights": {
     "title": "Highlights",
     "previous": "Previous video",

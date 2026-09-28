@@ -11,7 +11,8 @@
       "@lib/*": ["src/lib/*"],
       "@shaders/*": ["src/shaders/*"],
       "@styles/*": ["src/styles/*"],
-      "@stores/*": ["src/stores/*"]
+      "@stores/*": ["src/stores/*"],
+      "@data/*": ["src/data/*"]
     },
     "verbatimModuleSyntax": true,
     "allowImportingTsExtensions": true,

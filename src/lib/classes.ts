@@ -111,7 +111,7 @@ export const BRAND = clsx(
 export const SECOND_ROW = "grid grid-cols-1 gap-4 sm:gap-6 lg:grid-cols-3";
 
 /** Left column (1/3) in the second row. */
-export const SECOND_ROW_LEFT = "lg:col-span-1";
+export const SECOND_ROW_LEFT = "lg:col-span-1 sm:gap-6 flex flex-col";
 
 /** Right column (2/3) in the second row. */
 export const SECOND_ROW_RIGHT = "lg:col-span-2";
