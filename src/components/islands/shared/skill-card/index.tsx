@@ -76,7 +76,7 @@ export default function SkillCard({
       >
         <h2 className={titleClass}>{t("skills.title")}</h2>
 
-        <div className="flex flex-row gap-6">
+        <div className="grid grid-cols-3 gap-6">
           <SkillCategorySectionList
             categories={categories}
             isDesktop={isDesktop}
