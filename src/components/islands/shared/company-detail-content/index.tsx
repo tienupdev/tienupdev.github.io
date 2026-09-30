@@ -62,7 +62,9 @@ export default function CompanyDetailContent({
           {entry.company_name}
         </h2>
         <span className={PERIOD_TEXT}>
-          {formatDateRange(entry.date_from, entry.date_to)}
+          {entry.date_to
+            ? formatDateRange(entry.date_from, entry.date_to)
+            : entry.date_from}
         </span>
       </div>
 
@@ -74,9 +76,7 @@ export default function CompanyDetailContent({
 
       {/* Projects */}
       <div className="flex flex-col gap-4">
-        <h3 className={ACCENT_HEADING}>
-          {t("company_history.projects")}
-        </h3>
+        <h3 className={ACCENT_HEADING}>{t("company_history.projects")}</h3>
         <ProjectItemList projects={entry.projects} />
       </div>
     </div>

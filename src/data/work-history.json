@@ -1,11 +1,10 @@
 [
   {
-    "company_name": "Aurora Labs",
-    "slug": "aurora-labs",
-    "date_from": "2023-06",
-    "date_to": "2025-09",
+    "company_name": "PosApp LLC",
+    "slug": "posapp-llc",
+    "date_from": "Apr 2025",
     "url": "https://aurora.example.com",
-    "image_url": "https://preview.redd.it/macos-golden-gate-background-for-anyone-that-wants-it-v0-yzfjy05hyi6h1.jpeg?width=640&crop=smart&auto=webp&s=5aa6ff78411dc1fe72381fc78ec7d218c30d434d",
+    "image_url": "https://www.posapp.vn/wp-content/uploads/2017/10/logo-posapp-P-01.png",
     "projects": [
       {
         "name": "Realtime Collaboration Platform",
@@ -21,18 +20,18 @@
     ]
   },
   {
-    "company_name": "Helix Studio",
-    "slug": "helix-studio",
-    "date_from": "2021-03",
-    "date_to": "2023-05",
-    "url": "https://helix.example.com",
-    "image_url": "https://preview.redd.it/macos-golden-gate-v0-lu2hwm11v1ah1.png?width=6016&format=png&auto=webp&s=f14de026cc4b2bb469c2360b743adc368238aead",
+    "company_name": "Lucky Tech Company",
+    "slug": "lucky-tech-company",
+    "date_from": "2022-06",
+    "date_to": "2024-12",
+    "url": "https://www.linkedin.com/company/lucky-tech-company/?trk=public_profile_topcard-current-company&originalSubdomain=vn",
+    "image_url": "https://media.licdn.com/dms/image/v2/C4E0BAQFQeK-kqgHyGw/company-logo_200_200/company-logo_200_200/0/1636112031098?e=1792022400&v=beta&t=c8bmhh-jsQHBoNhA7Z8O4gbWxbr-RGwJXZiUqisnjt0",
     "projects": [
       {
         "name": "3D Product Configurator",
         "tech_stack": ["Three.js", "GLSL", "React", "Vite"],
         "problem_solved": "Created an interactive 3D product configurator with realtime material editing, boosting conversion rates by 25%.",
-        "url": "https://helix.example.com/configurator"
+        "url": "https://luckytech.example.com/configurator"
       },
       {
         "name": "WebGL Particle Engine",
@@ -42,18 +41,18 @@
     ]
   },
   {
-    "company_name": "Tessera Inc",
-    "slug": "tessera-inc",
-    "date_from": "2019-08",
-    "date_to": "2021-02",
-    "url": "https://tessera.example.com",
-    "image_url": "https://static1.squarespace.com/static/5e949a92e17d55230cd1d44f/649a467765854c170cc4a81b/6a272359ff18687747cdd33e/1780958274580/GoldenGate_3x2.png?format=1500w",
+    "company_name": "Vinova Ltd.",
+    "slug": "vinova-ltd",
+    "date_from": "2021-03",
+    "date_to": "2022-03",
+    "url": "https://vinova.sg/",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdLOlpqtsqlB0aft8ivyh05PwbZ39c8fZIxWOK_BkfYw&s",
     "projects": [
       {
         "name": "Data Visualization Dashboard",
         "tech_stack": ["D3.js", "React", "GraphQL", "Python"],
         "problem_solved": "Built a real-time analytics dashboard processing 50M+ events/day with sub-second query latency.",
-        "url": "https://tessera.example.com/dashboard"
+        "url": "https://vinova.sg/"
       }
     ]
   }

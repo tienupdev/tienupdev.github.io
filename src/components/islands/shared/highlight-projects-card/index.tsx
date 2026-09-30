@@ -44,7 +44,11 @@ function ProjectBlock({
     <div className="rounded-lg border border-white/10 bg-white/5 p-4">
       {/* Header: title + link */}
       <div className="mb-2 flex flex-wrap items-baseline justify-between gap-2">
-        <h3 className={clsx("font-mono text-sm font-medium text-cyan-400")}>
+        <h3
+          className={clsx(
+            "font-mono text-sm font-medium text-[var(--color-fg)]",
+          )}
+        >
           {project.title}
         </h3>
         {project.url ? (
@@ -80,9 +84,9 @@ function ProjectBlock({
 // ---- Tech badge --------------------------------------------------------------
 
 const TECH_BADGE = clsx(
-  "inline-block rounded-md border border-white/10",
-  "bg-white/5 px-2 py-0.5 font-mono text-xs",
-  "text-[var(--color-fg-muted)]",
+  "inline-block rounded-md border border-white/5",
+  "bg-white/5 px-1.5 py-0.5 font-mono text-[10px]",
+  "text-[var(--color-fg)]",
 );
 
 function TechBadge({ tech }: { tech: string }): React.ReactElement {

@@ -58,7 +58,9 @@ export default function TimelineEntry({
             {entry.company_name}
           </div>
           <div className={PERIOD_TEXT}>
-            {formatDateRange(entry.date_from, entry.date_to)}
+            {entry.date_to
+              ? formatDateRange(entry.date_from, entry.date_to)
+              : `${entry.date_from} - Now`}
           </div>
         </div>
         {logo}
