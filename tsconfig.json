@@ -4,6 +4,7 @@
     "jsx": "react-jsx",
     "jsxImportSource": "react",
     "baseUrl": ".",
+    "ignoreDeprecations": "6.0",
     "paths": {
       "@/*": ["src/*"],
       "@components/*": ["src/components/*"],
@@ -11,7 +12,8 @@
       "@lib/*": ["src/lib/*"],
       "@shaders/*": ["src/shaders/*"],
       "@styles/*": ["src/styles/*"],
-      "@stores/*": ["src/stores/*"]
+      "@stores/*": ["src/stores/*"],
+      "@data/*": ["src/data/*"]
     },
     "verbatimModuleSyntax": true,
     "allowImportingTsExtensions": true,
