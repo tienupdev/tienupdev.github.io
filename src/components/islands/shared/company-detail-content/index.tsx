@@ -7,9 +7,11 @@ import type { WorkHistoryEntry } from "@lib/work-history";
 import { formatDateRange } from "@lib/work-history";
 import { useTranslation } from "@lib/i18n";
 import { ACCENT_HEADING } from "@lib/classes";
-import { PERIOD_TEXT } from "../classes";
+import { PERIOD_TEXT } from "@components/islands/shared/classes";
 import clsx from "clsx";
 import ProjectItemList from "./project-item-list";
+import CompanyLink from "./company-link";
+import CoverImage from "./cover-image";
 
 export interface CompanyDetailContentProps {
   entry: WorkHistoryEntry;
@@ -19,35 +21,6 @@ export default function CompanyDetailContent({
   entry,
 }: CompanyDetailContentProps) {
   const { t } = useTranslation();
-
-  let companyLink: React.ReactNode = null;
-  if (entry.url) {
-    companyLink = (
-      <a
-        href={entry.url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={clsx(
-          "font-mono text-xs text-cyan-400",
-          "transition-colors hover:text-cyan-300",
-        )}
-      >
-        {entry.url} ↗
-      </a>
-    );
-  }
-
-  let coverImage: React.ReactNode = null;
-  if (entry.image_url) {
-    coverImage = (
-      <img
-        src={entry.image_url}
-        alt={entry.company_name}
-        className="aspect-[16/10] w-full rounded-lg object-cover"
-        loading="lazy"
-      />
-    );
-  }
 
   return (
     <div className="flex flex-col gap-6">
@@ -69,10 +42,15 @@ export default function CompanyDetailContent({
       </div>
 
       {/* Company link */}
-      {companyLink}
+      {entry.url ? <CompanyLink url={entry.url} /> : null}
 
       {/* Cover image */}
-      {coverImage}
+      {entry.image_url ? (
+        <CoverImage
+          imageUrl={entry.image_url}
+          companyName={entry.company_name}
+        />
+      ) : null}
 
       {/* Projects */}
       <div className="flex flex-col gap-4">

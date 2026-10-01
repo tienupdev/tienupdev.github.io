@@ -7,6 +7,7 @@
 import type { Skill } from "@lib/skills";
 import { formatExperiencedSince } from "@lib/skills";
 import clsx from "clsx";
+import SkillTooltip from "./skill-tooltip";
 
 export interface SkillRowProps {
   skill: Skill;
@@ -21,24 +22,6 @@ export default function SkillRow({
   yearsLabel,
   onClick,
 }: SkillRowProps): React.ReactElement {
-  let tooltip: React.ReactNode = null;
-  if (isDesktop && skill.extra_notes) {
-    tooltip = (
-      <div
-        className={clsx(
-          "pointer-events-none absolute right-0 bottom-full",
-          "z-20 mb-2 hidden max-w-xs rounded-md border",
-          "border-white/10 bg-[#0d0d18]/95 p-2",
-          "font-mono text-[11px] leading-relaxed",
-          "text-[var(--color-fg)] shadow-lg backdrop-blur-sm",
-          "group-hover:block",
-        )}
-      >
-        {skill.extra_notes}
-      </div>
-    );
-  }
-
   return (
     <div>
       <div className="mb-1 flex items-baseline justify-between gap-2">
@@ -73,7 +56,9 @@ export default function SkillRow({
         </div>
 
         {/* Desktop hover tooltip — upper-right corner */}
-        {tooltip}
+        {isDesktop && skill.extra_notes ? (
+          <SkillTooltip extraNotes={skill.extra_notes} />
+        ) : null}
       </div>
     </div>
   );

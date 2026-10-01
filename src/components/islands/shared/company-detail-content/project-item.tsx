@@ -10,6 +10,7 @@ import { BODY } from "@lib/classes";
 import { PROJECT_CARD } from "./classes";
 import clsx from "clsx";
 import TechBadgeList from "./tech-badge-list";
+import ProjectLink from "./project-link";
 
 type Project = WorkHistoryEntry["projects"][number];
 
@@ -21,23 +22,6 @@ export default function ProjectItem({
   project,
 }: ProjectItemProps): React.ReactElement {
   const { t } = useTranslation();
-
-  let projectLink: React.ReactNode = null;
-  if (project.url) {
-    projectLink = (
-      <a
-        href={project.url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={clsx(
-          "font-mono text-xs text-cyan-400",
-          "transition-colors hover:text-cyan-300",
-        )}
-      >
-        {t("company_history.link")} ↗
-      </a>
-    );
-  }
 
   return (
     <div className={PROJECT_CARD}>
@@ -55,7 +39,7 @@ export default function ProjectItem({
         >
           {project.name}
         </h4>
-        {projectLink}
+        {project.url ? <ProjectLink url={project.url} /> : null}
       </div>
       <p className={clsx(BODY, "mb-3")}>{project.problem_solved}</p>
       <div className="flex flex-wrap gap-1.5">

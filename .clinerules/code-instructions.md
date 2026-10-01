@@ -138,6 +138,20 @@ Ultracite enforces strict type safety, accessibility standards, and consistent c
 - Don't add extra closing tags for components without children.
 - Use `<>...</>` instead of `<Fragment>...</Fragment>`.
 - Watch out for possible "wrong" semicolons inside JSX elements.
+- Avoid assigning ReactNode as a variable inside a component, at all cost:
+
+```
+  let logo: React.ReactNode = null;
+  if (entry.image_url) {
+    logo = (
+      <img
+        src={entry.image_url}
+        alt={`${entry.company_name} logo`}
+        className="h-14 w-14 rounded-md object-cover"
+      />
+    );
+  }
+```
 
 ### Correctness and Safety
 

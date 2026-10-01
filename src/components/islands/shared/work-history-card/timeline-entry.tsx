@@ -5,37 +5,44 @@
  */
 import type { WorkHistoryEntry } from "@lib/work-history";
 import { formatDateRange } from "@lib/work-history";
-import { CARD } from "@lib/classes";
-import {
-  TIMELINE_ITEM,
-  TIMELINE_DOT,
-  TIMELINE_LINE,
-  TIMELINE_CONTENT,
-  COMPANY_NAME,
-} from "./classes";
-import { PERIOD_TEXT } from "../classes";
 import clsx from "clsx";
+import { PERIOD_TEXT } from "../classes";
+import {
+  COMPANY_NAME,
+  TIMELINE_CONTENT,
+  TIMELINE_DOT,
+  TIMELINE_ITEM,
+  TIMELINE_LINE,
+} from "./classes";
+
+interface CompanyLogoProps {
+  imageUrl: string | undefined;
+  companyName: string;
+}
 
 export interface TimelineEntryProps {
   entry: WorkHistoryEntry;
   onClick: (entry: WorkHistoryEntry) => void;
 }
 
+function CompanyLogo({ imageUrl, companyName }: CompanyLogoProps) {
+  if (!imageUrl) {
+    return null;
+  }
+
+  return (
+    <img
+      src={imageUrl}
+      alt={`${companyName} logo`}
+      className="h-14 w-14 rounded-md object-cover"
+    />
+  );
+}
+
 export default function TimelineEntry({
   entry,
   onClick,
 }: TimelineEntryProps): React.ReactElement {
-  let logo: React.ReactNode = null;
-  if (entry.image_url) {
-    logo = (
-      <img
-        src={entry.image_url}
-        alt={`${entry.company_name} logo`}
-        className="h-14 w-14 rounded-md object-cover"
-      />
-    );
-  }
-
   return (
     <div className={TIMELINE_ITEM}>
       <div className="relative flex flex-col items-center">
@@ -63,7 +70,10 @@ export default function TimelineEntry({
               : `${entry.date_from} - Now`}
           </div>
         </div>
-        {logo}
+        <CompanyLogo
+          imageUrl={entry.image_url}
+          companyName={entry.company_name}
+        />
       </div>
     </div>
   );
