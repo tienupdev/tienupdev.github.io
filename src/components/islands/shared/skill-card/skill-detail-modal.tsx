@@ -12,7 +12,7 @@ import {
   MODAL_TITLE_BAR,
   MODAL_WINDOW,
   TRAFFIC_LIGHT,
-} from "../classes";
+} from "@components/islands/shared/classes";
 import clsx from "clsx";
 
 export interface SkillDetailModalProps {
