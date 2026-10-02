@@ -1,0 +1,89 @@
+---
+/**
+ * 404.astro
+ *
+ * Custom 404 page with the same dot-matrix particle layout and header
+ * (via BaseLayout). Displays a YouTube iframe above a console-like box
+ * containing the error message.
+ */
+import BaseLayout from "@layouts/base-layout.astro";
+import clsx from "clsx";
+import { CARD } from "@lib/classes";
+
+const title = "404 — Not Found";
+const description = "The page you are looking for does not exist.";
+---
+
+<BaseLayout title={title} description={description}>
+  <section
+    class={clsx(
+      "mx-auto flex min-h-[calc(100vh-8rem)] w-full max-w-[640px]",
+      "flex-col items-center justify-center gap-8 py-8",
+    )}
+  >
+    {/* YouTube iframe */}
+    <div class="w-full overflow-hidden rounded-lg shadow-lg shadow-black/30">
+      <iframe
+        width="640"
+        height="480"
+        src="https://www.youtube.com/embed/zhHB4dZTChw?si=_MiX4Z50uJB6RvWn&amp;start=24"
+        title="KiiiKiii — I DO ME (Music Bank) | FanCam"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+        style="border: 0"
+        class="w-full"
+      >
+      </iframe>
+    </div>
+
+    {/* Console-like box */}
+    <div class={clsx(CARD, "w-full")}>
+      {/* Terminal title bar */}
+      <div class="mb-4 flex items-center gap-2">
+        <span class="h-3 w-3 rounded-full bg-red-500/80" />
+        <span class="h-3 w-3 rounded-full bg-yellow-500/80" />
+        <span class="h-3 w-3 rounded-full bg-green-500/80" />
+        <span
+          class={clsx(
+            "ml-2 font-mono text-xs",
+            "text-[var(--color-fg-muted)]",
+          )}
+        >
+          ~/error-log
+        </span>
+      </div>
+
+      {/* Terminal body */}
+      <div class="font-mono text-base leading-relaxed">
+        <div class="mb-2 text-[var(--color-fg-muted)]">
+          <span class="text-cyan-400">$</span> cat /var/log/system-404.log
+        </div>
+        <div class="flex flex-col gap-1">
+          <span class="text-rose-400">[ERROR]</span>
+          <span class="text-[var(--color-fg)]">
+            404 not found in the system 404 the new error error /n
+          </span>
+          <span class="text-[var(--color-fg-muted)] italic">
+            (Shoutouts to KiiiKiii)
+          </span>
+          <div class="mt-3 flex items-baseline gap-1">
+            <span class="text-cyan-400">$</span>
+            <span class="animate-pulse text-[var(--color-fg-muted)]">_</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* Back-home link */}
+    <a
+      href="/"
+      class={clsx(
+        "font-mono text-sm text-[var(--color-fg-muted)]",
+        "transition-colors hover:text-cyan-400",
+      )}
+    >
+      &larr; Return to home
+    </a>
+  </section>
+</BaseLayout>

@@ -19,6 +19,7 @@ export interface SkillDetailModalProps {
   skill: Skill | null;
   isDesktop: boolean;
   yearsLabel: string;
+  monthsLabel: string;
   onClose: () => void;
 }
 
@@ -26,11 +27,15 @@ export default function SkillDetailModal({
   skill,
   isDesktop,
   yearsLabel,
+  monthsLabel,
   onClose,
 }: SkillDetailModalProps): React.ReactElement | null {
   if (!skill || isDesktop) {
     return null;
   }
+
+  const { count, unit } = formatExperiencedSince(skill.experienced_since);
+  const experienceLabel = `${count} ${unit === "year" ? yearsLabel : monthsLabel}`;
 
   return (
     <div
@@ -63,7 +68,7 @@ export default function SkillDetailModal({
               {skill.name}
             </span>
             <span className="font-mono text-xs text-[var(--color-fg-muted)]">
-              {formatExperiencedSince(skill.experienced_since)} {yearsLabel}
+              {experienceLabel}
             </span>
           </div>
           <div

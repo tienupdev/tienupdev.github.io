@@ -12,6 +12,7 @@ export interface SkillCategorySectionProps {
   group: SkillCategory;
   isDesktop: boolean;
   yearsLabel: string;
+  monthsLabel: string;
   onBarClick: (skill: Skill) => void;
 }
 
@@ -19,6 +20,7 @@ export default function SkillCategorySection({
   group,
   isDesktop,
   yearsLabel,
+  monthsLabel,
   onBarClick,
 }: SkillCategorySectionProps): React.ReactElement {
   return (
@@ -38,6 +40,7 @@ export default function SkillCategorySection({
           skills={group.skills}
           isDesktop={isDesktop}
           yearsLabel={yearsLabel}
+          monthsLabel={monthsLabel}
           onClick={onBarClick}
         />
       </div>

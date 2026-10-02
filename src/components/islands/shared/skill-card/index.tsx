@@ -81,6 +81,7 @@ export default function SkillCard({
             categories={categories}
             isDesktop={isDesktop}
             yearsLabel={t("skills.years")}
+            monthsLabel={t("skills.months")}
             onBarClick={handleBarClick}
           />
         </div>
@@ -90,6 +91,7 @@ export default function SkillCard({
         skill={activeSkill}
         isDesktop={isDesktop}
         yearsLabel={t("skills.years")}
+        monthsLabel={t("skills.months")}
         onClose={closePopup}
       />
     </>

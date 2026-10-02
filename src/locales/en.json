@@ -29,7 +29,7 @@
   "about": {
     "title": "About",
     "heading": "About",
-    "bio": "I'm a full-stack developer and creative technologist who loves building interactive experiences with WebGL, 3D graphics, and modern web technologies.",
+    "bio": "I'm a full-stack developer who ensures the most optimal solutions for each use case, starting from the technical stack.",
     "video_editor_bio": "I'm a video editor and visual storyteller with a passion for crafting compelling narratives through motion. From short-form social content to long-form documentaries, I bring stories to life with precise pacing, color grading, and sound design."
   },
   "i_am_a": {
@@ -69,7 +69,8 @@
   },
   "skills": {
     "title": "Skills",
-    "years": "years"
+    "years": "years",
+    "months": "months"
   },
   "typing_test": {
     "title": "Typing Test",

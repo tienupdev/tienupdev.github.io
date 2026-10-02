@@ -69,7 +69,8 @@
   },
   "skills": {
     "title": "스킬",
-    "years": "년"
+    "years": "년",
+    "months": "개월"
   },
   "typing_test": {
     "title": "타이핑 테스트",

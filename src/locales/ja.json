@@ -69,7 +69,8 @@
   },
   "skills": {
     "title": "スキル",
-    "years": "年"
+    "years": "年",
+    "months": "ヶ月"
   },
   "typing_test": {
     "title": "タイピングテスト",

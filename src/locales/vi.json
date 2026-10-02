@@ -69,7 +69,8 @@
   },
   "skills": {
     "title": "Kỹ năng",
-    "years": "năm"
+    "years": "năm",
+    "months": "tháng"
   },
   "typing_test": {
     "title": "Kiểm tra gõ phím",
