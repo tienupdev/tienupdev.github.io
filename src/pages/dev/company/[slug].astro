@@ -29,7 +29,7 @@ const t = useTranslations(locale);
 const { entry } = Astro.props;
 ---
 
-<BaseLayout title={`${entry.company_name} — htien`} description={`${entry.company_name} — ${formatDateRange(entry.date_from, entry.date_to)}`} lang={locale}>
+<BaseLayout title={`${entry.company_name} — htien`} description={`${entry.company_name} — ${entry.date_to ? formatDateRange(entry.date_from, entry.date_to) : `${entry.date_from} - Now`}`} lang={locale}>
   <article class="mx-auto max-w-3xl px-4 py-8 sm:px-6 lg:px-8">
     <a class={BACK_LINK} href="/dev#work-history">
       {t("company_history.back")}

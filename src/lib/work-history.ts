@@ -19,7 +19,7 @@ export interface WorkHistoryEntry {
   company_name: string;
   slug: string;
   date_from: string; // ISO month, e.g. "2023-06"
-  date_to: string; // ISO month, e.g. "2025-09"
+  date_to?: string; // ISO month, e.g. "2025-09" — omit for current position
   url?: string;
   image_url?: string;
   projects: CompanyProject[];
