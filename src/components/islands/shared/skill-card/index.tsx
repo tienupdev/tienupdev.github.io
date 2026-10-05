@@ -76,11 +76,12 @@ export default function SkillCard({
       >
         <h2 className={titleClass}>{t("skills.title")}</h2>
 
-        <div className="flex flex-row gap-6">
+        <div className="grid grid-cols-3 gap-6">
           <SkillCategorySectionList
             categories={categories}
             isDesktop={isDesktop}
             yearsLabel={t("skills.years")}
+            monthsLabel={t("skills.months")}
             onBarClick={handleBarClick}
           />
         </div>
@@ -90,6 +91,7 @@ export default function SkillCard({
         skill={activeSkill}
         isDesktop={isDesktop}
         yearsLabel={t("skills.years")}
+        monthsLabel={t("skills.months")}
         onClose={closePopup}
       />
     </>

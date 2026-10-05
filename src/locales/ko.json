@@ -48,6 +48,9 @@
     "phone": "전화",
     "email": "이메일"
   },
+  "highlight_projects": {
+    "title": "주요 프로젝트"
+  },
   "highlights": {
     "title": "하이라이트",
     "previous": "이전 영상",
@@ -66,7 +69,8 @@
   },
   "skills": {
     "title": "스킬",
-    "years": "년"
+    "years": "년",
+    "months": "개월"
   },
   "typing_test": {
     "title": "타이핑 테스트",

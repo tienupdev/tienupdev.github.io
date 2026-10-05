@@ -11,6 +11,7 @@ export interface SkillRowListProps {
   skills: Skill[];
   isDesktop: boolean;
   yearsLabel: string;
+  monthsLabel: string;
   onClick: (skill: Skill) => void;
 }
 
@@ -18,6 +19,7 @@ export default function SkillRowList({
   skills,
   isDesktop,
   yearsLabel,
+  monthsLabel,
   onClick,
 }: SkillRowListProps): React.ReactNode {
   return skills.map((skill) => (
@@ -26,6 +28,7 @@ export default function SkillRowList({
       skill={skill}
       isDesktop={isDesktop}
       yearsLabel={yearsLabel}
+      monthsLabel={monthsLabel}
       onClick={onClick}
     />
   ));

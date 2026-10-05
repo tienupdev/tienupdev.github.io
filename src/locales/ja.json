@@ -48,6 +48,9 @@
     "phone": "電話",
     "email": "メール"
   },
+  "highlight_projects": {
+    "title": "注目プロジェクト"
+  },
   "highlights": {
     "title": "ハイライト",
     "previous": "前の動画",
@@ -66,7 +69,8 @@
   },
   "skills": {
     "title": "スキル",
-    "years": "年"
+    "years": "年",
+    "months": "ヶ月"
   },
   "typing_test": {
     "title": "タイピングテスト",

@@ -6,13 +6,13 @@
  */
 import type { Skill } from "@lib/skills";
 import { formatExperiencedSince } from "@lib/skills";
-import clsx from "clsx";
 import SkillTooltip from "./skill-tooltip";
 
 export interface SkillRowProps {
   skill: Skill;
   isDesktop: boolean;
   yearsLabel: string;
+  monthsLabel: string;
   onClick: (skill: Skill) => void;
 }
 
@@ -20,8 +20,12 @@ export default function SkillRow({
   skill,
   isDesktop,
   yearsLabel,
+  monthsLabel,
   onClick,
 }: SkillRowProps): React.ReactElement {
+  const { count, unit } = formatExperiencedSince(skill.experienced_since);
+  const experienceLabel = `${count} ${unit === "year" ? yearsLabel : monthsLabel}`;
+
   return (
     <div>
       <div className="mb-1 flex items-baseline justify-between gap-2">
@@ -29,7 +33,7 @@ export default function SkillRow({
           {skill.name}
         </span>
         <span className="font-mono text-[10px] text-[var(--color-fg-muted)]">
-          {formatExperiencedSince(skill.experienced_since)} {yearsLabel}
+          {experienceLabel}
         </span>
       </div>
 

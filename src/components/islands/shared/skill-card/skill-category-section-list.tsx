@@ -11,6 +11,7 @@ export interface SkillCategorySectionListProps {
   categories: SkillCategory[];
   isDesktop: boolean;
   yearsLabel: string;
+  monthsLabel: string;
   onBarClick: (skill: Skill) => void;
 }
 
@@ -18,6 +19,7 @@ export default function SkillCategorySectionList({
   categories,
   isDesktop,
   yearsLabel,
+  monthsLabel,
   onBarClick,
 }: SkillCategorySectionListProps): React.ReactNode {
   return categories.map((group) => (
@@ -26,6 +28,7 @@ export default function SkillCategorySectionList({
       group={group}
       isDesktop={isDesktop}
       yearsLabel={yearsLabel}
+      monthsLabel={monthsLabel}
       onBarClick={onBarClick}
     />
   ));

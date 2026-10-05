@@ -4,13 +4,7 @@
  * Static project grid for desktop (Zero JS).
  * Data is server-rendered; ProjectFilter island hydrates on top of it.
  */
-export interface Project {
-  slug: string;
-  title: string;
-  category: string;
-  year: number;
-  cover: string;
-}
+import type { Project } from "@data/highlight-projects/types";
 
 export interface Props {
   projects: Project[];

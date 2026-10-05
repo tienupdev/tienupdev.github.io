@@ -18,6 +18,6 @@ export interface ContactInfo {
 export const contact: ContactInfo = {
   phone: "+84889838077",
   phoneDisplay: "+84 889 838 077",
-  email: "tiengtructiengdong@gmail.com",
-  github: "tiengtructiengdong",
+  email: "hgatien.sdh231@hcmut.edu.vn",
+  github: "tienupdev",
 };
